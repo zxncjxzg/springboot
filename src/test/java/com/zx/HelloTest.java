@@ -31,4 +31,9 @@ public class HelloTest {
     public void getHello() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders.post("/hello").accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());
     }
+
+    @Test
+    public void saveUsers() throws Exception{
+        mockMvc.perform(MockMvcRequestBuilders.post("/saveUser").param("name","").param("age","600").param("password","test"));
+    }
 }
