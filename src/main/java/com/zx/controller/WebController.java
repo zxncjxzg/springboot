@@ -1,4 +1,4 @@
-package com.zx.web;
+package com.zx.controller;
 
 import com.zx.model.User;
 import org.springframework.validation.BindingResult;
@@ -18,7 +18,6 @@ import java.util.List;
 public class WebController {
 
     /**
-     *
      * @param user
      * @param result
      * 参数前面添加 @Valid 注解，代表此对象使用了参数校验
