@@ -1,6 +1,6 @@
 package com.zx.controller;
 
-import com.zx.model.User;
+import com.zx.model.User1;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +24,7 @@ public class WebController {
      * 参数校验的结果会存储在BindingResult对象中，可以根据属性判断是否校验通过，校验不通过可以将错误信息打印出来。
      */
     @RequestMapping("/saveUser")
-    public void saveUser(@Valid  User user, BindingResult result){
+    public void saveUser(@Valid User1 user, BindingResult result){
         System.out.println("user:"+user);
         if(result.hasErrors()){
             List<ObjectError> list=result.getAllErrors();
@@ -35,8 +35,8 @@ public class WebController {
     }
 
     @RequestMapping(name="/getUser", method= RequestMethod.GET)
-    public User getUser() {
-        User user=new User();
+    public User1 getUser() {
+        User1 user=new User1();
         user.setName("小明");
         user.setAge(12);
         user.setPassword("123456");
@@ -44,14 +44,14 @@ public class WebController {
     }
 
     @RequestMapping("/getUsers")
-    public List<User> getUsers() {
-        List<User> users=new ArrayList<User>();
-        User user1=new User();
+    public List<User1> getUsers() {
+        List<User1> users=new ArrayList<User1>();
+        User1 user1=new User1();
         user1.setName("neo");
         user1.setAge(30);
         user1.setPassword("neo123");
         users.add(user1);
-        User user2=new User();
+        User1 user2=new User1();
         user2.setName("小明");
         user2.setAge(12);
         user2.setPassword("123456");

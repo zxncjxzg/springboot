@@ -1,45 +1,78 @@
 package com.zx.model;
 
-import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
+import com.zx.enums.UserSexEnum;
 
-/**
- * Created by 11790 on 2019/1/15.
- */
-public class User {
-    @NotEmpty(message = "姓名不能为空")
-    private String name;
-    @Max(value=100,message="年龄不能大于100岁")
-    @Min(value= 18 ,message= "必须年满18岁！" )
-    private int age;
-    @NotEmpty(message="密码不能为空")
-    @Length(min=6,message="密码长度不能小于6位")
-    private String password;
+import java.io.Serializable;
 
-    public String getName() {
-        return name;
-    }
+public class User implements Serializable {
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	private static final long serialVersionUID = 1L;
+	private Long id;
+	private String userName;
+	private String passWord;
+	private UserSexEnum userSex;
+	private String nickName;
 
-    public int getAge() {
-        return age;
-    }
+	public User() {
+		super();
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public User(String userName, String passWord, UserSexEnum userSex) {
+		super();
+		this.passWord = passWord;
+		this.userName = userName;
+		this.userSex = userSex;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassWord() {
+		return passWord;
+	}
+
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+
+	public UserSexEnum getUserSex() {
+		return userSex;
+	}
+
+	public void setUserSex(UserSexEnum userSex) {
+		this.userSex = userSex;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	@Override
+	public String toString() {
+		return "UserEntity{" +
+				"id=" + id +
+				", userName='" + userName + '\'' +
+				", passWord='" + passWord + '\'' +
+				", userSex=" + userSex +
+				", nickName='" + nickName + '\'' +
+				'}';
+	}
 }

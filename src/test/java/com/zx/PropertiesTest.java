@@ -1,7 +1,7 @@
 package com.zx;
 
-import com.zx.web.config.NeoProperties;
-import com.zx.web.config.OtherProperties;
+import com.zx.config.NeoProperties;
+import com.zx.config.OtherProperties;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import javax.print.attribute.standard.MediaSize;
 
 /**
  * Created by 11790 on 2019/2/20.

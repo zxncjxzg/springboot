@@ -1,4 +1,4 @@
-package com.zx.web.config;
+package com.zx.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
