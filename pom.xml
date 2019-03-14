@@ -8,10 +8,10 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.imooc</groupId>
-	<artifactId>dive-in-spring-boot</artifactId>
+	<groupId>com.zx</groupId>
+	<artifactId>springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dive-in-spring-boot</name>
+	<name>springboot</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
